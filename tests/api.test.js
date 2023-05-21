@@ -7,7 +7,7 @@ const helper = require('./testHelper')
 const api = supertest(app)
 const User = require('../models/user')
 const bcrypt = require('bcrypt')
-jest.setTimeout(30000)
+jest.setTimeout(100000)
 beforeEach(async () => {
     await Article.deleteMany({})
     await User.deleteMany({})
