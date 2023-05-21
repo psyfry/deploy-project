@@ -11,7 +11,7 @@
     "start:test": "NODE_ENV=test node index.js"
   },
   "author": "Patrick Graham",
-  "license": "MIT",
+  "license": "ISC",
   "devDependencies": {
     "dotenv": "^10.0.0",
     "eslint": "^7.32.0",
@@ -34,5 +34,8 @@
   },
   "jest": {
     "testEnvironment": "node"
-  }
+  },
+  "eslintIgnore": [
+    "frontend/*"
+  ]
 }
