@@ -1,4 +1,4 @@
-import articleService from "../services/articleService"
+import articleService from '../services/articleService'
 export const setSearchQuery = (tag) => {
     return async (dispatch) => {
         const results = await articleService.getTaggedArticles(tag)

@@ -9,9 +9,9 @@ import Box from '@mui/material/Box'
 const Dashboard = ({ user, toggleWatchlist, watchlist }) => {
     return (
         <Box sx={{ width: '100%' }}>
-            <Stack direction='row' spacing={2} justifyContent="center" >
+            <Stack direction='row' spacing={2} justifyContent='center' >
                 <Watchlist watchlist={watchlist} user={user} toggleWatchlist={toggleWatchlist} />
-                <Divider orientation="vertical" flexItem />
+                <Divider orientation='vertical' flexItem />
                 <Stack direction='column' spacing={3} alignItems='stretch'>
                     <RecentActivity />
                     <Stats />

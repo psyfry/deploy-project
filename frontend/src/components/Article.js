@@ -51,7 +51,7 @@ export default function Article({ id, title, author, url, modificationDate, desc
     const handleDelete = (event) => {
         event.preventDefault()
         dispatch(deleteArticle(id))
-        dispatch(setErrorMessage('success', "Entry Deleted", 8))
+        dispatch(setErrorMessage('success', 'Entry Deleted', 8))
     }
     const handleEditClick = () => {
         const prevArr = { id, title, author, url, description, tags, doi, pubDate, publisher }
@@ -62,12 +62,12 @@ export default function Article({ id, title, author, url, modificationDate, desc
     }
 
     const toggleWatchlist = async () => {
-        const watchStatus = watchlistIds.includes(id) ? "removed from" : "added to"
+        const watchStatus = watchlistIds.includes(id) ? 'removed from' : 'added to'
         try {
             dispatch(toggleWatched(id))
-            dispatch(setErrorMessage('success', `"${title}" by ${author} ${watchStatus} watchlist`, 5))
+            dispatch(setErrorMessage('success', `'${title}' by ${author} ${watchStatus} watchlist`, 5))
         } catch (exception) {
-            dispatch(setErrorMessage('error', "Error: Toggle Watchlist Failed", 5))
+            dispatch(setErrorMessage('error', 'Error: Toggle Watchlist Failed', 5))
         }
     }
 
@@ -75,7 +75,7 @@ export default function Article({ id, title, author, url, modificationDate, desc
     const watchColor = watchlistIds.includes(id) ? 'secondary' : 'action'
 
     return (
-        <Card variant="outlined" sx={{ maxWidth: '400px' }}>
+        <Card variant='outlined' sx={{ maxWidth: '400px' }}>
             <CardHeader
                 avatar={
                     <IconButton aria-label='user' >
@@ -85,40 +85,40 @@ export default function Article({ id, title, author, url, modificationDate, desc
                     </IconButton>
                 }
                 title={title}
-                subheader={<a href={url} target="_blank" rel="noreferrer" >{url}</a>}
+                subheader={<a href={url} target='_blank' rel='noreferrer' >{url}</a>}
             />
             <Divider />
             <CardContent>
                 <List dense={true}>
                     <ListItem>
-                        <ListItemText primary="Description: " secondary={description} />
+                        <ListItemText primary='Description: ' secondary={description} />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="Author: " secondary={author} />
+                        <ListItemText primary='Author: ' secondary={author} />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="Pub. Date: " secondary={pubDate} />
+                        <ListItemText primary='Pub. Date: ' secondary={pubDate} />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="Publisher: " secondary={publisher} />
+                        <ListItemText primary='Publisher: ' secondary={publisher} />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="DOI: " secondary={doi} />
+                        <ListItemText primary='DOI: ' secondary={doi} />
                     </ListItem>
                 </List>
                 <Tags tags={tags} isDeletable='false' />
-                {modificationDate && <Typography variant="overline">Last Modified: {modificationDate}</Typography>}
+                {modificationDate && <Typography variant='overline'>Last Modified: {modificationDate}</Typography>}
             </CardContent>
             <CardActions disableSpacing>
-                <IconButton aria-label="add to watchlist" onClick={toggleWatchlist} id={id}>
+                <IconButton aria-label='add to watchlist' onClick={toggleWatchlist} id={id}>
                     <FavoriteIcon color={watchColor} />
                 </IconButton>
                 {user.username === currentUser.username ? (
                     <>
-                        <IconButton aria-label="Edit" onClick={handleEditClick}>
+                        <IconButton aria-label='Edit' onClick={handleEditClick}>
                             <EditSharpIcon />
                         </IconButton>
-                        <IconButton aria-label="Delete" onClick={handleDelete}>
+                        <IconButton aria-label='Delete' onClick={handleDelete}>
                             <DeleteIcon />
                         </IconButton>
                     </>) : <></>}
@@ -126,14 +126,14 @@ export default function Article({ id, title, author, url, modificationDate, desc
                     expand={expanded}
                     onClick={handleExpandClick}
                     aria-expanded={expanded}
-                    aria-label="show comments"
+                    aria-label='show comments'
                 >
-                    <Tooltip title="View Comments">
+                    <Tooltip title='View Comments'>
                         <ExpandMoreIcon />
                     </Tooltip>
                 </ExpandMore>Comments
             </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
+            <Collapse in={expanded} timeout='auto' unmountOnExit>
                 <CardContent>
                     <CommentBox id={id} comments={comments} />
                 </CardContent>

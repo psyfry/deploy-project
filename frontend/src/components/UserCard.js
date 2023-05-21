@@ -29,10 +29,10 @@ export default function UserCard({ username, firstName, lastName, articles, avat
     };
     const fullName = `${firstName} ${lastName}`
     return (
-        <Card variant="outlined" sx={{ minWidth: '400px', maxWidth: '400px' }}>
+        <Card variant='outlined' sx={{ minWidth: '400px', maxWidth: '400px' }}>
             <CardHeader
                 avatar={
-                    <Avatar sx={{ bgcolor: avatarColor }} aria-label="user">
+                    <Avatar sx={{ bgcolor: avatarColor }} aria-label='user'>
                         {displayName}
                     </Avatar>
                 }
@@ -44,13 +44,13 @@ export default function UserCard({ username, firstName, lastName, articles, avat
                     expand={expanded}
                     onClick={handleExpandClick}
                     aria-expanded={expanded}
-                    aria-label="show info"
+                    aria-label='show info'
                 >
                     <ExpandMoreIcon />
                 </ExpandMore>
                 <Typography variant='button'>Submissions</Typography>
             </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
+            <Collapse in={expanded} timeout='auto' unmountOnExit>
                 <CardContent>
 
                     <ArticleContainer articles={articles} />

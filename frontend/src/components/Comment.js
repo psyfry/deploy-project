@@ -11,11 +11,11 @@ const Comment = ({ comment }) => {
     return <Card sx={{ maxWidth: 400 }}>
         <CardHeader
             avatar={
-                <Avatar sx={{ bgcolor: comment.color }} aria-label="comment">
+                <Avatar sx={{ bgcolor: comment.color }} aria-label='comment'>
                     {comment.name}
                 </Avatar>
             }
-            align="left"
+            align='left'
 
             title={comment.username}
             subheader={formatDate}

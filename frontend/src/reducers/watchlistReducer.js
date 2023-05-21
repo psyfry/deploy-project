@@ -1,4 +1,4 @@
-import articleService from "../services/articleService"
+import articleService from '../services/articleService'
 
 export const getWatchlist = () => {
     return async (dispatch) => {

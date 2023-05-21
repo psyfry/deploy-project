@@ -36,22 +36,22 @@ const Stats = () => {
     const memoizedStats = useMemo(() => computeStats(articles, userList), [ articles, userList ]);
     //*
     return (
-        <Card variant="outlined">
+        <Card variant='outlined'>
             <CardHeader title='Stats' />
             <Divider />
             <Box sx={{ bgcolor: 'background.paper' }}>
                 <Tabs
-                    aria-label="toggle stat view"
-                    textColor="primary"
-                    indicatorColor="secondary"
+                    aria-label='toggle stat view'
+                    textColor='primary'
+                    indicatorColor='secondary'
                     value={viewOption}
                     onChange={handleChange}
-                    variant="fullWidth"
+                    variant='fullWidth'
                 >
-                    <Tab value="main" label="main" />
+                    <Tab value='main' label='main' />
 
-                    <Tab value="charts" label="charts" />
-                    <Tab value="tags" label="tags" />
+                    <Tab value='charts' label='charts' />
+                    <Tab value='tags' label='tags' />
                 </Tabs>
             </Box>
             <CardContent>

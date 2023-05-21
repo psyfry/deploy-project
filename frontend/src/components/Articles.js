@@ -12,7 +12,7 @@ const Articles = ({ articles, toggleWatchlist }) => {
     return (
         <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
             <Stack direction='column' spacing={1}>
-                {articleList ? articleList : <Skeleton variant="rectangular" width={210} height={118} />}
+                {articleList ? articleList : <Skeleton variant='rectangular' width={210} height={118} />}
             </Stack>
         </Box>
     )

@@ -36,6 +36,6 @@
     "testEnvironment": "node"
   },
   "eslintIgnore": [
-    "frontend/*"
+    "/frontend/*"
   ]
 }

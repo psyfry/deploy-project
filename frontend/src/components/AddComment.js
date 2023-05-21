@@ -18,7 +18,7 @@ const AddComment = ({ id }) => {
     return (
         <Box sx={{ maxWidth: 400 }}>
             <form onSubmit={handleComment}>
-                <Stack justifyContent="space-around" direction='row' spacing={0.5}>
+                <Stack justifyContent='space-around' direction='row' spacing={0.5}>
                     <TextField
                         onChange={({ target }) => setComment(target.value)}
                         value={comment}

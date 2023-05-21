@@ -5,7 +5,7 @@ import Slide from '@mui/material/Slide';
 
 
 /* function SlideTransition(props) {
-    return <Slide {...props} direction="up" />;
+    return <Slide {...props} direction='up' />;
 } */
 
 const Notifications = ({ type, message }) => {
@@ -13,7 +13,7 @@ const Notifications = ({ type, message }) => {
     return (
         <Stack sx={{ width: '100%', position: 'sticky' }} spacing={2}>
             <Slide in={open}>
-                <Alert variant="filled" severity={type} sx={{ width: '100%' }}>{message}</Alert>
+                <Alert variant='filled' severity={type} sx={{ width: '100%' }}>{message}</Alert>
             </ Slide>
         </Stack>
     )

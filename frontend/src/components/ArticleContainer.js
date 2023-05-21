@@ -7,8 +7,8 @@ const ArticleContainer = ({ articles, toggleWatchlist }) => {
 
     const displayedEntries = articles.filter((x) => {
         //console.log(x.filterType);
-        let sanitizedInput = filterQuery.replace(/[#-.]|[[-^]|[?|{}]/g, "\\$&")
-        let searchRegExp = new RegExp(sanitizedInput, "i")
+        let sanitizedInput = filterQuery.replace(/[#-.]|[[-^]|[?|{}]/g, '\\$&')
+        let searchRegExp = new RegExp(sanitizedInput, 'i')
         switch (filterType) {
             case 'title':
                 return searchRegExp.test(x.title)

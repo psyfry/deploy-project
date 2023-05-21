@@ -38,7 +38,7 @@ const EditArticleModal = ({ id, prevTitle, prevAuthor, prevUrl, prevDescription,
     const dispatch = useDispatch()
 
     const handleTagKeyPress = (e) => {
-        if (e.key === "Enter") {
+        if (e.key === 'Enter') {
             e.preventDefault()
             handleAddTag()
         }

@@ -1,0 +1,4 @@
+frontend/
+*.sh
+node_modules/
+build/

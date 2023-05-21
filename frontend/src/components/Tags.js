@@ -15,17 +15,17 @@ const Tags = ({ tags, handleDelete, isDeletable }) => {
             label={x}
             id={x}
             key={`${x}${index}`}
-            variant="outlined"
-            color="primary"
+            variant='outlined'
+            color='primary'
             onDelete={handleDelete}
         />)
     } else {
         tagList = tags.map((x, index) => <Chip
             label={x}
             key={`${x}${index}`}
-            component="a"
-            variant="filled"
-            color="primary"
+            component='a'
+            variant='filled'
+            color='primary'
             clickable
         />)
     }

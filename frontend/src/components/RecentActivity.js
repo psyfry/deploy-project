@@ -13,7 +13,7 @@ const RecentActivity = () => {
     // console.log({ recentArticles });
     // console.log({ recentComments });
     return (
-        <Card variant="outlined" sx={{ maxWidth: '400px' }}>
+        <Card variant='outlined' sx={{ maxWidth: '400px' }}>
             <CardHeader title='Recent Activity' />
             <Divider />
             <CardContent>
