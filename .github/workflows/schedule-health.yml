@@ -1,0 +1,12 @@
+on:
+    schedule:
+        - cron: "30 1 * * 1"
+jobs:
+    schedule_health_check:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Health Check
+              uses: jtalk/url-health-check-action@v3
+              with:
+                url: https://crowdref.onrender.com/
+                max-attempts: 5
