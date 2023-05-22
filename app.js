@@ -12,7 +12,7 @@ const loginRouter = require('./controllers/login')
 const middleware = require('./utils/middleware')
 const watchlistRouter = require('./controllers/watchlist')
 //const responseTime = require('response-time')
-const path = require('node:path')
+const path = require('path')
 mongoose
     .connect(config.MONGO_URI, {
         useNewUrlParser: true,
