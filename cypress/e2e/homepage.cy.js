@@ -8,4 +8,8 @@ describe('Hompage shows', () => {
     cy.visit('http://localhost:3030')
     cy.contains('Login')
   })
+  it('The login page displays correctly', () => {
+    cy.visit('http://localhost:3030/login')
+    cy.contains('Login')
+  })
 })

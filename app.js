@@ -34,6 +34,10 @@ app.use('/api/login', loginRouter)
 app.use('/api/users', usersRouter)
 app.use('/api/articles', articleRouter)
 app.use('/api/watchlist', watchlistRouter)
+app.get('/*', (req,res) => {
+    //When complete will serve built website, now just pings
+    res.sendFile(path.join(__dirname, 'build', 'index.html'))
+})
 if (process.env.NODE_ENV === 'test') {
     const testing = require('./controllers/testingRouter')
     app.use('/api/testing/', testing)
