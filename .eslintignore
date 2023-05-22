@@ -1,4 +1,6 @@
 frontend/
 *.sh
 node_modules/
-build/
+build
+build/*
+cypress
