@@ -27,7 +27,6 @@ mongoose
     })
 
 app.use(cors())
-app.use(express.static('build'))
 app.use(express.json())
 app.use(middleware.requestLog)
 app.use(express.static(path.join(__dirname, 'build')))
