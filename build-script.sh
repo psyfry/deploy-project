@@ -2,7 +2,7 @@
 
 echo "Build Script Start"
 echo "Remove stale/test builds"
-rm build/
+rm -rf build/
 echo "Build React"
 cd frontend
 npm ci
