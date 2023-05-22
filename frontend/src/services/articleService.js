@@ -1,8 +1,8 @@
 /* eslint-disable import/no-anonymous-default-export */
 import axios from 'axios'
-const baseUrl = 'http://localhost:3030/api/articles'
+const baseUrl = 'https://crowdref.onrender.com/api/articles'
 let token = null
-const watchlistUrl = 'http://localhost:3030/api/watchlist'
+const watchlistUrl = 'https://crowdref.onrender.com/api/watchlist'
 const setToken = (newToken) => {
     token = `bearer ${newToken}`
 }
