@@ -13,6 +13,7 @@ const middleware = require('./utils/middleware')
 const watchlistRouter = require('./controllers/watchlist')
 //const responseTime = require('response-time')
 const path = require('path')
+const staticRouter = require('./frontend/src/services/staticServices')
 mongoose
     .connect(config.MONGO_URI, {
         useNewUrlParser: true,
@@ -29,7 +30,8 @@ app.use(cors())
 app.use(express.static('build'))
 app.use(express.json())
 app.use(middleware.requestLog)
-app.use(express.static(path.join(__dirname, 'build')))
+// app.use(express.static(path.join(__dirname, 'build')))
+app.use('/', staticRouter)
 app.use('/api/login', loginRouter)
 app.use('/api/users', usersRouter)
 app.use('/api/articles', articleRouter)
