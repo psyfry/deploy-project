@@ -1,11 +1,11 @@
 // const cy = require('cypress')
 describe('Hompage shows', () => {
   it('shows navbar logo text', () => {
-    cy.visit('localhost:3030')
-    cy.contains('crowdref')
+    cy.visit('http://localhost:3030/')
+    cy.contains('CROWDREF')
   })
   it('shows login Button', () => {
-    cy.visit('localhost:3030')
-    cy.contains('login')
+    cy.visit('http://localhost:3030')
+    cy.contains('Login')
   })
 })
