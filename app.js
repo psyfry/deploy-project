@@ -12,8 +12,7 @@ const loginRouter = require('./controllers/login')
 const middleware = require('./utils/middleware')
 const watchlistRouter = require('./controllers/watchlist')
 //const responseTime = require('response-time')
-const path = require('path')
-const staticRouter = require('./frontend/src/services/staticServices')
+const staticRouter = require('./controllers/staticServices')
 mongoose
     .connect(config.MONGO_URI, {
         useNewUrlParser: true,
@@ -36,10 +35,10 @@ app.use('/api/login', loginRouter)
 app.use('/api/users', usersRouter)
 app.use('/api/articles', articleRouter)
 app.use('/api/watchlist', watchlistRouter)
-app.get('/*', (req,res) => {
-    //When complete will serve built website, now just pings
-    res.sendFile(path.join(__dirname, 'build', 'index.html'))
-})
+// app.get('/*', (req,res) => {
+//     //When complete will serve built website, now just pings
+//     res.sendFile(path.join(__dirname, 'build', 'index.html'))
+// })
 if (process.env.NODE_ENV === 'test') {
     const testing = require('./controllers/testingRouter')
     app.use('/api/testing/', testing)
